@@ -8,8 +8,7 @@
 }
 
 .navbar-custom{
-  background-color: var(--color-dark);
-  position: fixed !important;
+  background-color: var(--color-dark);  
   width: 100%;
   z-index: 10;
 }
