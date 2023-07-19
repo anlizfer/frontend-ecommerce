@@ -1,5 +1,17 @@
+:root{
+  --color-dark:#000;
+  --color-light:#fff;
+}
+
+.logo{
+  width: 45px;
+}
+
 .navbar-custom{
-  background-color: #000;
+  background-color: var(--color-dark);
+  position: fixed !important;
+  width: 100%;
+  z-index: 10;
 }
 .icono-cart{
   width: 20px;
@@ -7,11 +19,18 @@
 }
 
 .btn-aparel{
-  background-color: #000;
+  background-color: var(--color-dark);
   border:none;
-  color: #fff !important;
+  color: var(--color-light) !important;
 }
 
 .image-hero{
   width: 100%;
+  margin-top: 25px;
+}
+
+.footer-dark{
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 50px 0;
 }
