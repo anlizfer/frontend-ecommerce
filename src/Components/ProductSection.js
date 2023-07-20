@@ -1,36 +1,12 @@
 import React, { useState } from "react"
 import CardProduct from "../Components/CardProduct";
+import ProductsData from "../Data/ProductsData";
 
 const ProductSection = ({type, colorBackground}) => {
 
     
 
-    const [arraProducts,setArraProducts]=useState([
-        {
-            IdProduct:1,
-            nameProduct:"Sloth Game Tshirt",
-            typeShirt:"Classic Crew Neck",
-            atributeShirt:"Comfortsoft T-Shirt",
-            priceProduct:21.99,
-            type:"Featured"
-        },
-        {
-            IdProduct:2,
-            nameProduct:"Grafiti Game Shirt",
-            typeShirt:"Classic Crew Neck",
-            atributeShirt:"Comfortsoft T-Shirt",
-            priceProduct:23.99,
-            type:"Featured"
-        },
-        {
-            IdProduct:3,
-            nameProduct:"SkullColor Game Shirt",
-            typeShirt:"Classic Crew Neck",
-            atributeShirt:"Comfortsoft T-Shirt",
-            priceProduct:29.99,
-            type:"Promo"
-        }
-    ]);
+    const [arraProducts,setArraProducts]=useState(ProductsData);
 
     
     return (

@@ -4,7 +4,7 @@ import ImgProductBack from '../Assets/Images/products/camiseta-1-back.jpg'
 import ImgCartAdd from '../Assets/Images/cart-add.png'
 import '../Components/CardProducts.css'
 
-const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct}) => {    
+const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug}) => {    
     const [imgProd,setImgProduct]=useState(ImgProduct)
 
     const MouseOverProduct=()=>{
@@ -15,19 +15,22 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct}) => {
         setImgProduct(ImgProduct);
     }
 
-    
+   
+
     return (
         <div className="col-md-3">
-            <div
-                className="card-product"
-                onMouseOut={MouseOutProduct}
-                onMouseOver={MouseOverProduct}
-                style={{ backgroundImage: `url(${imgProd})` }}>
+            <a href={`./product/${slug}`}>
+                <div                
+                    className="card-product"
+                    onMouseOut={MouseOutProduct}
+                    onMouseOver={MouseOverProduct}
+                    style={{ backgroundImage: `url(${imgProd})` }}>
 
-                <button className="btn-add-cart">
-                    <img src={ImgCartAdd} />
-                </button>
-            </div>
+                    <button className="btn-add-cart">
+                        <img src={ImgCartAdd} />
+                    </button>
+                </div>
+            </a>
 
             <div className="InfoProduct">
                 <div className="row">

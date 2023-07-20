@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="row">
 
                     <div className="col-md-4">
-
+                        <a style={{color:"#fff"}} href='../terms-of-use'>Terms of use</a>
                     </div>
 
                     <div className="col-md-4 text-center">

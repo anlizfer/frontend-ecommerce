@@ -13,7 +13,7 @@ const Header = () => {
                 <div className='container-fluid'>
                     <div className='row' style={{ width: "100%" }}>
                         <div className='col-md-2'>
-                            <a className="navbar-brand" href="#">
+                            <a className="navbar-brand" href="/">
                                 <img className="logo" src={Logo} />
                             </a>
                         </div>
