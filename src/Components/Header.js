@@ -19,7 +19,7 @@ const Header = () => {
                         </div>
 
                         <div className='col-md-8 text-center'>
-                            <button type="button" className="btn btn-outline-light">Explorer</button>
+                            <button type="button" className="btn btn-outline-light btn-explorer">Explorer</button>
                             <button type="button" className="btn btn-aparel" style={{ marginLeft: "15px" }}>Apparel</button>
                         </div>
 

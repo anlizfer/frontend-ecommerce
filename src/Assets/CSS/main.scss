@@ -1,0 +1,54 @@
+@import 'buttons';
+
+
+$color-dark: #000;
+$color-light: #fff;
+
+.logo {
+    width: 45px;
+}
+
+
+
+.navbar-custom {
+    background-color: $color-dark;
+    width: 100%;
+    z-index: 10;
+    position: fixed !important;
+
+    .btn-aparel {        
+        border: none;
+        color: $color-light !important;
+
+        &:hover{
+            @debug true + " is a boolean value"; 
+        }
+
+    }    
+
+
+}
+
+
+.icono-cart {
+    width: 20px;
+    margin-right: 5px;
+}
+
+
+
+.image-hero {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.footer-dark {
+    background-color: $color-dark;
+    color: $color-light;
+    padding: 50px 0;
+}
+
+.page {
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+}

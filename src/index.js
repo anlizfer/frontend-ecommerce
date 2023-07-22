@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Assets/CSS/main.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RouterProvider} from 'react-router-dom';
 import Routes from './Routes/main'

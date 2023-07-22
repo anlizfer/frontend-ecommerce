@@ -1,0 +1,11 @@
+@mixin background-button{
+    background-color: red;    
+    font-weight: 900;
+    text-decoration: underline;
+
+}
+
+@function calc-sum($valor1){    
+    $valor2:15px;
+    @return $valor1+$valor2;
+}
