@@ -1,10 +1,19 @@
-import React,{useState} from 'react';
+import React,{useContext, useEffect} from 'react';
 import Logo from '../Assets/Images/logo.png'
 import ImgCart from '../Assets/Images/shopping-cart.png';
+import {MyContext} from '../Hooks/MyContext';
 
 const Header = () => {    
+    const {CountCart,setCountCart} = useContext(MyContext);
 
-    const [contador,setContador] = useState(0)
+    useEffect(()=>{
+        let carritoData= JSON.parse(localStorage.getItem("cart"));
+        if(carritoData){
+            setCountCart(carritoData.length)
+        }
+        
+    },[])
+    
 
     return (
         <header>
@@ -24,7 +33,10 @@ const Header = () => {
                         </div>
 
                         <div className='col-md-2 text-end'>
-                            <button className='btn btn-light'><img className='icono-cart' src={ImgCart}></img> Cart {contador}</button>
+                            <a href='../cart' className='btn btn-light'>
+                                <img className='icono-cart' src={ImgCart}></img> 
+                                Carrito {CountCart}
+                            </a>
                         </div>
 
                     </div>

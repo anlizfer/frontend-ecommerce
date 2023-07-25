@@ -4,15 +4,18 @@ import './Assets/CSS/main.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RouterProvider} from 'react-router-dom';
 import Routes from './Routes/main'
+import { ContextProvider } from './Hooks/MyContext'
 
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={Routes}></RouterProvider>
-  </React.StrictMode>
+  
+    <ContextProvider>    
+      <RouterProvider router={Routes}></RouterProvider>
+    </ContextProvider>
+  
 );
 
 

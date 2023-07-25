@@ -8,7 +8,8 @@ const ProductsData=()=>{
             priceProduct:21.99,
             type:"Featured",
             slug:"sloth-game-tshirt",
-            imageFront:"imagen del frente",
+            cant:1,
+            imageFront:"imagen del frente",            
             imageBack:"https://localhost:3000/products/imagen-front-camiseta-1.jpg"
         },
         {
@@ -17,6 +18,7 @@ const ProductsData=()=>{
             typeShirt:"Classic Crew Neck",
             atributeShirt:"Comfortsoft T-Shirt",
             priceProduct:23.99,
+            cant:1,
             type:"Featured",
             slug:"grafiti-game-shirt"
         },
@@ -26,6 +28,7 @@ const ProductsData=()=>{
             typeShirt:"Classic Crew Neck",
             atributeShirt:"Comfortsoft T-Shirt",
             priceProduct:29.99,
+            cant:1,
             type:"Promo",
             slug:"skullcolor-game-shirt"
         }

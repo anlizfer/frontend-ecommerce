@@ -1,12 +1,15 @@
-import React, { useState,useEffect } from "react"
+import React, { useState,useEffect, useContext } from "react"
 import ImgProduct from '../Assets/Images/products/camiseta-1-front.jpg'
 import ImgProductBack from '../Assets/Images/products/camiseta-1-back.jpg'
 import ImgCartAdd from '../Assets/Images/cart-add.png'
 import '../Components/CardProducts.css'
+import { MyContext } from "../Hooks/MyContext"
 
-const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug}) => {    
+
+const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug,cant,IdProduct}) => {    
     const [imgProd,setImgProduct]=useState(ImgProduct);
     const [itemAddCart, setItemAddCart]=useState({});
+    const {CountCart,setCountCart}=useContext(MyContext);
     
     useEffect(()=>{ 
         //debugger       
@@ -15,9 +18,12 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug}) =>
             if(ItemsCarts){
                 ItemsCarts.push(itemAddCart);
                 localStorage.setItem('cart', JSON.stringify(ItemsCarts));       
+                setCountCart(ItemsCarts.length);
             }else{
                 localStorage.setItem('cart', JSON.stringify([{...itemAddCart}]));       
+                setCountCart(1);
             }
+            //console.log(ItemsCarts.length)
             
             
         }
@@ -32,7 +38,7 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug}) =>
     }
 
     const AddCart=()=>{                
-        setItemAddCart({nameProduct,typeShirt,atributeShirt,priceProduct})
+        setItemAddCart({nameProduct,typeShirt,atributeShirt,priceProduct,cant,IdProduct})
     }
 
 
