@@ -7,7 +7,7 @@ const Header = () => {
     const {CountCart,setCountCart} = useContext(MyContext);
 
     useEffect(()=>{
-        let carritoData= JSON.parse(localStorage.getItem("cart"));
+        let carritoData= JSON.parse(localStorage.getItem("cart"));//PUEDE SER REEMPLAZADO POR LA API DE MI
         if(carritoData){
             setCountCart(carritoData.length)
         }

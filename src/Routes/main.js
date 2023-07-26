@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import TermsOfUse from "../Pages/TermsOfUse";
 import Product from "../Pages/Product";
 import Cart from "../Pages/Cart";
+import Checkout from "../Pages/Checkout";
 
 const Routes = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const Routes = createBrowserRouter([
     {
         path: "/cart/",
         element: <Cart></Cart>
+    }
+    ,
+    {
+        path: "/checkout/",
+        element: <Checkout></Checkout>
     }
 ]);
 
