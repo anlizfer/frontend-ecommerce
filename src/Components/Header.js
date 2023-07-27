@@ -23,7 +23,7 @@ const Header = () => {
                     <div className='row' style={{ width: "100%" }}>
                         <div className='col-md-2'>
                             <a className="navbar-brand" href="/">
-                                <img className="logo" src={Logo} />
+                                <img className="logo" alt='Logo Amazing Tshirt 4U' src={Logo} />
                             </a>
                         </div>
 
@@ -33,8 +33,8 @@ const Header = () => {
                         </div>
 
                         <div className='col-md-2 text-end'>
-                            <a href='../cart' className='btn btn-light'>
-                                <img className='icono-cart' src={ImgCart}></img> 
+                            <a href='../cart' className='btn btn-light' aria-label='Go to cart page'>
+                                <img className='icono-cart' alt='Icon Cart' src={ImgCart}></img> 
                                 Carrito {CountCart}
                             </a>
                         </div>

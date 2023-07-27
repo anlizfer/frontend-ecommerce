@@ -49,7 +49,7 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug,cant
         <div className="col-md-3">
             
                 <div style={{position:"relative"}}>
-                    <a href={`./product/${slug}`}>
+                    <a href={`./product/${slug}`} aria-label={nameProduct} >
                         <div                
                             className="card-product"
                             onMouseOut={MouseOutProduct}
@@ -60,8 +60,8 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug,cant
                         </div>
                     </a>
 
-                    <button className="btn-add-cart" onClick={AddCart} >
-                        <img src={ImgCartAdd} />
+                    <button className="btn-add-cart" aria-label="Button Add Cart" onClick={AddCart}   >
+                        <img src={ImgCartAdd} alt="icon cart" />
                     </button>
 
                 </div>
@@ -71,7 +71,7 @@ const CardProduct = ({nameProduct,typeShirt,atributeShirt,priceProduct,slug,cant
             <div className="InfoProduct">
                 <div className="row">
                     <div className="col-8">
-                        <h4>{nameProduct}</h4>
+                        <h3>{nameProduct}</h3>
                         <p>{typeShirt}</p>
                         <p>{atributeShirt}</p>
                     </div>
