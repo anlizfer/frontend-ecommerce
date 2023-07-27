@@ -27,7 +27,7 @@ const Product=()=>{
                 <div className="row">
 
                     <div className="col-md-7">
-                        <img src={ImgProduct}></img>
+                        <img src={ImgProduct} loading='lazy'></img>
                     </div>
 
                     <div className="col-md-5">
